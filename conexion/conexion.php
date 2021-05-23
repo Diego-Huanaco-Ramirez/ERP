@@ -19,8 +19,8 @@ class Database
     public function Database(){
       if(!isset($this->conexion)){
     
-    $this->conexion = (mysql_connect('localhost','root','root123')) or die(mysql_error());
-    mysql_select_db('erp', $this->conexion) or die(mysql_error());      
+    $this->conexion = (mysql_connect('localhost','root','')) or die(mysql_error());
+    mysql_select_db('erpprueba', $this->conexion) or die(mysql_error());      
      
         mysql_query ("SET NAMES 'utf8'");
       }
