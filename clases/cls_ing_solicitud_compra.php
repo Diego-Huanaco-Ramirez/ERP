@@ -80,6 +80,7 @@ class cls_solicitud_compra { // class : begin
     function getsolc_tipo() {
         return $this->solc_tipo;
     }
+    
 
 // **********************
 // SETTER METHODS

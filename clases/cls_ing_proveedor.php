@@ -191,7 +191,11 @@ class cls_ing_proveedor { // class : begin
 
     function select() {
         $prov_id = $this->prov_id;
-        $sql = "SELECT * FROM ing_proveedor WHERE ;";
+        $prov_ciudad = $this->prov_ciudad;
+        $prov_servicio = $this->prov_servicio;
+        $prov_giro = $this->prov_giro;
+        
+        $sql = "SELECT * FROM ing_proveedor WHERE ";
 
         if ($prov_id != null) {
             $sql = $sql . "AND prov_id = '" . $prov_id . "' ";
@@ -256,7 +260,11 @@ class cls_ing_proveedor { // class : begin
     function update() {
         $prov_id = $this->prov_id;
 
-        $sql = " UPDATE ing_proveedor SET  pais_codigo = '$this->pais_codigo',prov_rut = '$this->prov_rut',prov_rutdig = '$this->prov_rutdig',prov_nombre = '$this->prov_nombre',prov_ciudad = '$this->prov_ciudad',prov_mail = '$this->prov_mail',prov_direccion = '$this->prov_direccion',prov_fono = '$this->prov_fono',prov_contacto = '$this->prov_contacto',prov_servicio = '$this->prov_servicio',prov_condicion_pago = '$this->prov_condicion_pago',prov_ranking = '$this->prov_ranking',prov_giro = '$this->prov_giro',prov_log = '$this->prov_log' WHERE prov_id = $prov_id ";
+        $sql = " UPDATE ing_proveedor SET  pais_codigo = '$this->pais_codigo',prov_rut = '$this->prov_rut',prov_rutdig = '$this->prov_rutdig',"
+                . "prov_nombre = '$this->prov_nombre',prov_ciudad = '$this->prov_ciudad',prov_mail = '$this->prov_mail',"
+                . "prov_direccion = '$this->prov_direccion',prov_fono = '$this->prov_fono',prov_contacto = '$this->prov_contacto',"
+                . "prov_servicio = '$this->prov_servicio',prov_condicion_pago = '$this->prov_condicion_pago',prov_ranking = '$this->prov_ranking',"
+                . "prov_giro = '$this->prov_giro' WHERE prov_id = $prov_id ";
 
         $result = $this->database->query($sql);
     }

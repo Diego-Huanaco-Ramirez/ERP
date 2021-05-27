@@ -335,7 +335,7 @@ class cls_ing_ingreso_det2 { // class : begin
                     . " WHERE ING_ITEM = $ing_item ";
                 break;
             case 1:
-                $sql = " UPDATE ing_ingreso_det2 SET ING_ESTADO_INGRESO = '$this->ING_ESTADO_INGRESO'";
+                $sql = " UPDATE ing_ingreso_det2 SET ING_ESTADO_INGRESO = '$this->ING_ESTADO_INGRESO' WHERE ING_ITEM = $ing_item ";
                 break;
         }
         $result = $this->database->query($sql);
